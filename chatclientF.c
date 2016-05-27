@@ -89,7 +89,7 @@ static void *do_recv(void *arg)
 
   struct message msg;
 
-  int *sockfd = arg;
+  int sockfd = (*(int *)arg); //dereference void ptr casted to int ptr
 
   char c[MSGSIZE];
 
@@ -332,7 +332,7 @@ int main(int argc, char **argv)
 //IF WE MADE IT INTO THE USER QUEUE
   
   
-  pthread_create(&rcvThread, NULL, do_recv, (void *) sockfd);
+  pthread_create(&rcvThread, NULL, do_recv, &sockfd);
 
   struct message loopMsg;
   char *chatMessage = malloc(MSGSIZE);

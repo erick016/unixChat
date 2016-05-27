@@ -1,5 +1,7 @@
 # unixChat
 
+5/26/2016: Updated to remove warnings
+
 To run the program, open a shell for the server, and 1 shell per desired client.
 
 To compile the server, type: gcc chatserverC.c -o chatserverC -pthread
