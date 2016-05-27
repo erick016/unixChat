@@ -1,6 +1,6 @@
 # unixChat
 
-5/26/2016: Updated to remove warnings
+5/26/2016: Updated to remove warnings for client program.
 
 To run the program, open a shell for the server, and 1 shell per desired client.
 
